@@ -129,6 +129,8 @@ methods.init = function(){
         graphicsStage.setHeight(sizeCns[1]);
         graphicsStage.setWidth(sizeCns[0]);
         
+        methods.updateTraker();
+        
         if(dataCache.lineX) dataCache.lineX.setPoints([sizeCns[0]/2-200,sizeCns[1]/2,sizeCns[0]/2+200,sizeCns[1]/2])
         if(dataCache.lineY) dataCache.lineY.setPoints([sizeCns[0]/2,sizeCns[1]/2-100,sizeCns[0]/2,sizeCns[1]/2+100])
         if(dataCache.circle) dataCache.circle.setPosition(sizeCns[0]/2,sizeCns[1]/2)

@@ -203,6 +203,7 @@ methods.addAnimation = function(i,n,isNew){
                 }
                 
                 $(this).remove();
+                opLeft.empty()
                 $.sl('update_scroll');
             },
             'Клонировать':function(){
@@ -253,6 +254,7 @@ methods.addSkin = function(i,n,isNew){
                 delete loadAnim.skins[i];
                 
                 $(this).remove();
+                opLeft.empty()
                 $.sl('update_scroll');
             },
             'Клонировать':function(){
@@ -406,6 +408,7 @@ methods.addNewSprite = function(i,b){
     sprite.on('mousedown',function(){
         methods.layerOption(b);
         methods.atachToTransform(sprite,b);
+        methods.initAnimKeys();
     })
 }
 
@@ -574,6 +577,9 @@ methods.addLayer = function(i,n){
                 
                 methods.initLayers();
                 methods.updateVis();
+                
+                opLeft.empty()
+                $.sl('update_scroll');
             },
             'Удалить оставить':function(){
                 for(var c in loadAnim.layers){
@@ -585,6 +591,9 @@ methods.addLayer = function(i,n){
                 
                 methods.initLayers();
                 methods.updateVis();
+                
+                opLeft.empty()
+                $.sl('update_scroll');
             }
         },{
             position: 'cursor',
@@ -791,6 +800,7 @@ methods.initAnimation = function(){
             }
             
             loadAnim.layers = newSort;
+            methods.updateVis();
         }
 	});
     
@@ -805,6 +815,12 @@ methods.initAnimation = function(){
     methods.updateVis();
     
     methods.animLayer()
+}
+
+methods.updateTraker = function(){
+    animCns.width = $('#animTrack').width();
+    
+    graphicsStage.setWidth(animCns.width);
 }
 
 methods.addTreker = function(){
