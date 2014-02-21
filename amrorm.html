@@ -1,0 +1,159 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>AMRORM</title>
+<link rel="shortcut icon" href="editor/media/ico_16.png">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="plugins/js/cufon.js"></script>
+<script type="text/javascript" src="plugins/js/corbel.font.js"></script>
+<script type="text/javascript" src="plugins/js/jquery.js"></script>
+<script type="text/javascript" src="plugins/js/jquery_ui.js"></script>
+<script type="text/javascript" src="plugins/js/scroll.js"></script>
+<script type="text/javascript" src="plugins/js/scin.js"></script>
+<script type="text/javascript" src="plugins/js/sl.js"></script>
+<script type="text/javascript" src="plugins/js/jquery.mjs.nestedSortable.js"></script>
+<script type="text/javascript" src="media/kinetic.js"></script>
+<script type="text/javascript" src="media/function.js"></script>
+
+
+<link rel="stylesheet" href="plugins/css/tools.css" type="text/css" />
+<link rel="stylesheet" href="plugins/css/form.css" type="text/css" />
+<link rel="stylesheet" href="plugins/css/scroll.css" type="text/css" />
+<link rel="stylesheet" href="plugins/css/animate.css" type="text/css" />
+<link rel="stylesheet" href="plugins/css/sl.css" type="text/css" />
+
+<link rel="stylesheet" href="editor/media/inc.css" type="text/css" />
+
+<script>
+var dataCache = {};
+</script>
+</head>
+
+<body id="wrap" class="t_body t_over" style="background: #0a0a0a; color: #838383;">
+
+
+
+<div class="top_panel t_clearfix" style="height: 34px;">
+ <ul class="t_ul globalManu sl_user_btn">
+
+  <li>Файл
+   <div>
+    <span onclick="methods.fileNewAnim()">Новый</span>
+    <span onclick="methods.fileOpenAnim()">Открыть</span>
+    <span onclick="methods.fileSaveAnim()">Сохранить</span>
+   </div>
+  </li>
+  <li>Вид
+   <div>
+    <span onclick="methods.setScale(1);">Увеличить</span>
+    <span onclick="methods.setScale(-1);">Уменьшить</span>
+    <span onclick="methods.setScale(0);">Масштаб&nbsp;100%</span>
+   </div>
+  </li>
+  <li onclick="methods.abount()">О программе</li>
+ </ul>
+</div>
+
+
+
+
+
+
+
+<div id="buld" class="t_p_r">
+<table class="buld_table win_h_size t_width" minus="61" cellspacing="0" cellpadding="0">
+    <tr>
+        <td class="vis" style='-moz-user-select: none;-webkit-user-select: none;' onselectstart='return false;'>
+            
+            <div class="visual_bg_conteiner resizeWin t_over t_p_r" minus="61" tabindex="0" style="outline: none;">
+                <div id="graphics" class="t_p_a t_left t_top t_width t_height"></div>
+            </div>
+            
+        </td>
+        <td class="wi rightToolBig" style="width: 220px;">
+            <div class="tools_sep"></div>
+            <div class="scrollbarInit t_over rightToolBox">
+                <div id="fileManager">
+                </div>
+            </div>
+            
+            <div id="panel">
+                <div class="resizeWin scrollbarInit" minus="61">
+                    <div class="header">
+                        <h3>Свойства</h3>
+                        <div class="hide" onclick="methods.panelShowOrHide()"></div>
+                    </div>
+                    <div class="sep"></div>
+                    <ul class="list_style objectProperty objProperties"></ul>
+                </div>
+            </div>
+        </td>
+
+    </tr>
+</table>
+<div class="buld_bottom t_clearfix">
+    <div class="animationPanel">
+        <div class="btns">
+            <ul class="t_ul">
+                <li class="play" id="playAnim"></li>
+                <li class="loop" id="loopAnim"></li>
+                <li class="start" id="startAnim"></li>
+                <li class="end" id="endAnim"></li>
+                <li class="step" id="stepAnim"></li>
+                <li class="key"  id="insetKey"></li>
+                <li class="time" id="timeAnim">0.54s</li>
+            </ul>
+        </div>
+        <div class="animTrack" id="animTrack"></div>
+    </div>
+</div>
+
+</div>
+
+
+<div class="preloader"></div>
+
+
+<script type="text/javascript" src="editor/editor.js?12262"></script>
+<script type="text/javascript" src="editor/fl.js?12262"></script>
+<script type="text/javascript" src="editor/LZADialog.js?12262"></script>
+
+
+
+<script type="text/javascript" src="editor/methods/init.js?12262"></script>
+<script type="text/javascript" src="editor/methods/opValI.js?12262"></script>
+<script type="text/javascript" src="editor/methods/img.js?12262"></script>
+<script type="text/javascript" src="editor/methods/manager.js?12262"></script>
+<script type="text/javascript" src="editor/methods/anim.js?12262"></script>
+<script>
+
+
+try{
+    var fs      = require('fs');
+    var gui     = require('nw.gui');
+    var path    = require('path');
+    var nwPath  = process.execPath;
+    var nwDir   = path.dirname(nwPath);
+    var app     = true;
+    
+    nwDir = '';
+    
+    //$ = window.jQuery;
+}
+catch(e){
+    var nwDir = '';
+}
+
+
+methods.init();
+
+$.sl('top_panel',{
+    fun: function(){
+        
+    }
+});
+
+</script>
+
+</body>
+</html>

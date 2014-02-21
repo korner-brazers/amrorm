@@ -1,0 +1,1215 @@
+a{
+    color: #ff7200;
+    text-decoration: none;
+}
+.buld_table{
+    padding: 0;
+    margin: 0;
+    border:0px;
+    border-collapse:collapse;
+}
+.buld_table td{
+    padding: 0;
+    vertical-align: top;
+}
+.clearfix:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.sl_btn{
+    min-width: 11px;
+    text-align: center;
+}
+.sl_checkbox{
+    margin: 2px 5px;
+}
+textarea,input{
+    outline: none;
+}
+.buld_table td.wi{
+    background: #383838;
+    width: 36px;
+    box-shadow:inset 0px 1px 0px rgb(72, 72, 72);
+	-moz-box-shadow:inset 0px 1px 0px rgb(72, 72, 72);
+	-webkit-box-shadow:inset 0px 1px 0px rgb(72, 72, 72);
+}
+.buld_table td.vis{
+    padding: 0 3px;
+}
+.buld_bottom{
+    background: #1b1b1b;
+    height: 42px;
+    box-shadow:inset 0px 1px 0px #2a2a2a;
+	-moz-box-shadow:inset 0px 1px 0px #2a2a2a;
+	-webkit-box-shadow:inset 0px 1px 0px #2a2a2a;
+    margin-top: 3px;
+}
+.buld_bottom .c{
+    color: #aaaaaa;
+    padding: 5px 5px;
+}
+.buld_bottom .c a{
+    text-decoration: none;
+    color: #ff7200;
+    text-shadow: 0 0 6px #FF7200;
+}
+.buld_bottom .l{
+    padding: 5px 5px 0 5px;
+}
+.visual_bg_conteiner{
+    background: #2d2d2d;
+}
+.visual_bg_conteiner.move{
+    cursor: move;
+}
+.change{
+    /*box-shadow: 0 0 12px 1px rgba(229, 28, 56, 0.6) inset;*/
+    /*outline: 1px solid rgba(229, 28, 56, 0.6);*/
+}
+#buld .obj{
+    background: #0d0d0d;
+    border: 1px solid #080808;
+    width: 100px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    position: absolute;
+    cursor: default;
+}
+#buld .obj.change,
+#buld .obj.moved{
+    box-shadow: 0 0 6px 1px rgba(229, 28, 56, 0.5);
+}
+#buld .obj .name_obj{
+    background: #1b1b1b;
+    font-family: Arial;
+    font-size: 12px;
+    color: #9a9a9a;
+    text-align: center;
+    height: 23px;
+    line-height: 23px;
+    box-shadow:inset 0px 1px 0px rgb(40, 40, 40);
+	-moz-box-shadow:inset 0px 1px 0px rgb(40, 40, 40);
+	-webkit-box-shadow:inset 0px 1px 0px rgb(40, 40, 40);
+    -webkit-border-top-left-radius: 3px;
+    -webkit-border-top-right-radius: 3px;
+    -moz-border-radius-topleft: 3px;
+    -moz-border-radius-topright: 3px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+#buld .obj .onoff{
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    cursor: pointer;
+    background: url(img/off.png) no-repeat 50% 50%;
+    width: 35px;
+    height: 10px;
+    margin-left: -17px;
+}
+#buld .obj .onoff.on{
+    background-image: url(img/on.png);
+}
+#buld .obj .attach{
+    text-align: center;
+    line-height: 13px;
+    font-family: Arial;
+    font-size: 12px;
+    color: #999999;
+    cursor: default;
+}
+#buld .obj .attach .in,
+#buld .obj .attach .out{
+    background: url(img/attach.png) no-repeat 50% 50%;
+    height: 14px;
+    width: 10px;
+    cursor: pointer;
+}
+#buld .obj .attach .in{
+    float: left;
+}
+#buld .obj .attach .out{
+    float: right;
+}
+#buld .obj .values{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+#buld .obj .values li{
+    text-align: center;
+    line-height: 10px;
+    font-family: Arial;
+    font-size: 10px;
+    color: #ff5400;
+    display: block;
+    height: 10px;
+    margin-top: 7px;
+    cursor: default;
+}
+#buld .obj .values li .in,
+#buld .obj .values li .out{
+    background: url(img/li_def.png) no-repeat 50% 50%;
+    height: 10px;
+    width: 10px;
+    cursor: pointer;
+}
+#buld .obj .values li .in{
+    float: left;
+}
+#buld .obj .values li .out{
+    float: right;
+}
+#buld .obj .values li .in.active,
+#buld .obj .values li .out.active{
+    background: url(img/li_ac.png) no-repeat 50% 50%;
+}
+#buld .canvas{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#buld .obj textarea,
+#buld .obj input{
+    display: none;
+}
+#buld .tools_sep{
+    background: url(img/tools_sep.png) no-repeat 50% 50%;
+    height: 7px;
+    margin: 2px 0;
+}
+#buld .tools{
+    margin: 0;
+    padding: 0 0 0 2px;
+    list-style: none;
+}
+#buld .tools li{
+    position: relative;
+}
+#buld .tools li:not(.sepl),
+#buld .tools li span{
+    width: 31px;
+    height: 25px;
+    background: url(img/tools_btn.png) no-repeat 50% 25px;
+    display: block;
+    cursor: pointer;
+    margin: 2px 0;
+    position: relative;
+}
+#buld .tools li:not(.sepl):hover,
+#buld .tools li.sepl span:hover{
+    background-position: 50% -25px;
+}
+#buld .tools li.active:not(.sepl),
+#buld .tools li.sepl span.active{
+    background-position: 50% 0px;
+}
+#buld .tools li.sepl{
+    margin-top: 15px;
+}
+#buld .tools li.sepl:after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 7px;
+    background: url(img/tools_sep.png) no-repeat 34% 50%;
+}
+#panel h3{
+    font-weight: bold;
+    text-transform: none;
+    float: left;
+    display: block;
+    color: #acacac;
+    font-size: 14px;
+    padding-top: 12px;
+    text-shadow: 0 -1px 0 #000000;
+    margin: -5px 0 10px;
+}
+#panel .header{
+    padding: 4px 5px 0 10px;
+}
+#panel .btns{
+    float: right;
+}
+#panel .hide{
+    float: right;
+    width: 30px;
+    height: 30px;
+    background: url(img/hidePanel.png) no-repeat 50% 50%;
+    cursor: pointer;
+}
+
+#panel{
+    position: absolute;
+    top: 0;
+    right: -300px;
+    width: 280px;
+    background: #2a2a2a;
+    box-shadow:inset 0px 1px 0px #444444, -3px 0 0 #0a0a0a;
+	-moz-box-shadow:inset 0px 1px 0px #444444, -3px 0 0 #0a0a0a;
+	-webkit-box-shadow:inset 0px 1px 0px #444444, -3px 0 0 #0a0a0a;
+    cursor: default;
+}
+#panel.active{
+    right: 223px;
+}
+
+#buld .sep{
+    border-top: 1px solid #141414;
+    border-bottom: 1px solid #414141;
+    clear: both;
+}
+#buld .conteiner_position_layer{
+    -webkit-transition:-webkit-transform 400ms;   
+    -moz-transition:-moz-transform 400ms;
+    -o-transition:-o-transform 400ms;
+    transition:transform 400ms;
+    display: none;
+}
+#buld .conteiner_position_layer.active{
+    display: block;
+}
+#buld .conteiner_position_layer._100{
+    -webkit-transform:scale(1);
+    -moz-transform:scale(1);
+    transform:scale(1);
+}
+#buld .conteiner_position_layer._90{
+    -webkit-transform:scale(0.9);
+    -moz-transform:scale(0.9);
+    transform:scale(0.9);
+}
+#buld .conteiner_position_layer._80{
+    -webkit-transform:scale(0.8);
+    -moz-transform:scale(0.8);
+    transform:scale(0.8);
+}
+#buld .conteiner_position_layer._70{
+    -webkit-transform:scale(0.7);
+    -moz-transform:scale(0.7);
+    transform:scale(0.7);
+}
+#buld .conteiner_position_layer._60{
+    -webkit-transform:scale(0.6);
+    -moz-transform:scale(0.6);
+    transform:scale(0.6);
+}
+#buld .conteiner_position_layer._50{
+    -webkit-transform:scale(0.5);
+    -moz-transform:scale(0.5);
+    transform:scale(0.5);
+}
+#buld .conteiner_position_layer._40{
+    -webkit-transform:scale(0.4);
+    -moz-transform:scale(0.4);
+    transform:scale(0.4);
+}
+#buld .conteiner_position_layer._30{
+    -webkit-transform:scale(0.3);
+    -moz-transform:scale(0.3);
+    transform:scale(0.3);
+}
+ul.libraly_list,
+ul.list_style{
+    padding: 5px;
+    margin: 0;
+    list-style: none;
+}
+ul.libraly_list li,
+ul.list_style li{
+    border-bottom: 1px solid #1d1d1d;
+    display: block;
+    background-color: #2a2a2a;
+    border-top: 1px solid #323232;
+    background-repeat: no-repeat;
+    background-position: 7px 6px;
+    color: #acacac;
+    padding: 0;
+}
+ul.list_style li:after{
+    display: block;
+    content: '';
+    clear: both;
+}
+ul.list_style li{
+    padding: 4px 7px;
+    background-position: 7px 50%;
+}
+#buld ul.libraly_list li span{
+    padding: 7px 7px 7px 30px;
+    cursor: pointer;
+    display: block;
+}
+#buld ul.prjListLi li,
+#buld ul.objListNav li{
+    padding: 2px 7px;
+    background-image: url(img/prj.png);
+    cursor: pointer;
+}
+#buld ul.objListNav li{
+    padding: 4px 7px 4px 30px;
+    background-image: url(img/obj.png);
+}
+#buld ul.prjListLi li.change{
+    background-image: url(img/prjChange.png);
+}
+#buld ul.prjListLi li span{
+    font-weight: bold;
+    display: inline-block;
+    line-height: 18px;
+    margin: 3px 0;
+    padding: 1px 5px;
+    margin-left: 22px;
+}
+#buld ul.prjListLi li:hover span,
+#buld ul.prjListLi li.active span{
+    background: none repeat scroll 0 0 #0F0F0F;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 0 18px #000000 inset;
+    color: #FE7624;
+    text-transform: none;
+}
+ul.objProperties li{
+    padding: 0;
+}
+ul.objProperties li.active{
+    box-shadow: inset -5px 0 0 #F60;
+}
+ul.objProperties li.ti{
+    padding: 9px 7px;
+    text-align: center;
+    font-weight: bold;
+}
+ul.objProperties li:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+ul.objProperties li .r{
+    float: right;
+    width: 65%;
+}
+ul.objProperties li .l{
+    float: left;
+    width: 30%;
+    display: block;
+    padding: 7px 0 0 5px;
+}
+.areaProper{
+    margin: 3px 5px;
+    background: #1B1B1B;
+    border-top: 1px solid #161616;
+    border-bottom: 1px solid #323232;
+    height: 23px;
+    border-radius: 3px;
+    position: relative;
+    overflow: hidden;
+}
+.areaProper textarea,
+.areaProper input{
+    overflow: hidden;
+    height: 23px;
+    display: block;
+    border: 0;
+    background: transparent;
+    color: #656565;
+    font-family: Arial;
+    font-size: 11px;
+    line-height: 21px;
+    padding: 0 5px;
+    resize: none;
+    width: 85%;
+}
+.areaProper .bigEdit{
+    background: url("img/edit_input.png") no-repeat scroll 50% 50% #0B0B0B;
+    cursor: pointer;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 20px;
+}
+ul.libraly_list li:nth-child(even),
+ul.list_style li:nth-child(even){
+    background-color: #262626;
+    border-top: 1px solid #2e2e2e;
+}
+ul.list_style li:hover{
+    background-color: #2d2d2d;
+}
+ul.list_style li:nth-child(even):hover{
+    background-color: #292929;
+}
+ul.libraly_list li:first-child,
+ul.list_style li:first-child{
+    border-top: 0;
+}
+ul.libraly_list li:last-child,
+ul.list_style li:last-child{
+    border-bottom: 0;
+}
+ul.libraly_list > li{
+    background-image: url(img/lib_ico.png);
+}
+ul.libraly_list > li > span{
+    font-weight: bold;
+    display: inline-block;
+    min-height: 13px;
+}
+ul.libraly_list > li > ul > li{
+    background-image: url(img/objects_ico.png);
+    background-position: 30px 6px;
+}
+ul.libraly_list > li > ul > li > ul > li{
+    background-image: url(img/plus.png);
+    background-position: 51px 6px;
+}
+ul.libraly_list > li > ul > li > span{
+    padding-left: 51px;
+}
+ul.libraly_list > li > ul > li > ul > li > span{
+    padding-left: 73px;
+}
+/** Category **/
+#buld ul.libraly_list ul{
+    background: inherit;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: none;
+}
+#buld ul.libraly_list li.liObj.move{
+    border: 1px dashed #646464;
+}
+#buld .moveObjLib{
+    background: rgba(0,0,0,0.26) url(img/plus.png) no-repeat 10px 50%;
+    padding: 7px 7px 7px 30px;
+    border: 1px dashed #373737;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.buld_c{
+    color: #cccccc;
+}
+.buld_c a{
+    text-decoration: none;
+    color: #ff7200;
+    text-shadow: 0 0 6px #FF7200;
+}
+.m_logo{
+    position: absolute;
+    left: 52px;
+    bottom: 38px;
+    background: url(img/m_logo.png) no-repeat 0 0;
+    width: 66px;
+    height: 21px;
+}
+.imCoop{
+    text-align: center;
+    background: #1b1b1b;
+    border-radius: 3px;
+    overflow: hidden;
+    margin: 3px 5px;
+    cursor: pointer;
+    float: left;
+    position: relative;
+}
+.imgSelBtn{
+    float: left;
+}
+.imCoop img{
+    max-height: 55px;
+    min-height: 20px;
+    max-width: 100px;
+    vertical-align: bottom;
+}
+.imgSelBtn .remove{
+    position: absolute;
+    top: 3px;
+    right: -20px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    color: #fff;
+    line-height: 21px;
+    background: rgba(0,0,0,0.7);
+    border-radius: 3px;
+    cursor: pointer;
+}
+.imgSelBtn .remove.hide{
+    display: none;
+}
+.imgSelect li{
+    text-align: center;
+    height: 110px;
+    width: 175px;
+    margin: 10px 0;
+    cursor: pointer;
+    overflow: hidden;
+    display: block;
+    float: left;
+    position: relative;
+}
+.imgSelect li:hover{
+    background-color: #323232;
+}
+.imgSelect li img{
+    vertical-align: bottom;
+    max-height: 110px;
+}
+.imgSelect li img.ld{
+    margin-top: 47px;
+}
+.imgSelect li .inf{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.6);
+}
+.imgSelect li .inf span{
+    display: block;
+    color: #fff;
+    padding: 3px 5px;
+}
+.imgSelect li.back{
+    background: url(img/back.png) no-repeat 50% 50%;
+}
+.imgSelect li.back .inf{
+    display: none;
+}
+.imgSelect li.dir{
+    background-image: url(img/open_folder.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+.imgSelect li.file{
+    background-image: url(img/file.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+.map{
+    background: url(img/grid_dark.png);
+}
+.audioSelect .l,
+.list_style li.simple .l{
+    padding: 0 0 0 5px !important;
+    height: inherit;
+    line-height: 29px;
+    cursor: pointer;
+}
+.objProperties .play{
+    min-width: 11px;
+    text-align: center;
+}
+.showItems li .areaProper{
+    margin: 0 5px;
+    width: 60px;
+}
+.showItems li input{
+    width: 60px;
+}
+.showItems li .del,
+ul.itemsSelect > li > .select{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6) url(img/obj.png) no-repeat 50% 50%;
+    opacity: 0;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.showItems li .del:hover,
+.itemsSelect li .select:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+.itemsSelect{
+    padding: 0 10px;
+}
+.itemsSelect li{
+    display: block;
+}
+.itemsSelect li .img{
+    width: 75px;
+    height: 75px;
+    overflow: hidden;
+    text-align: center;
+    float: left;
+    margin-right: 10px;
+    position: relative;
+    cursor: pointer;
+}
+.itemsSelect li .img img{
+    height: 75px;
+    vertical-align: bottom;
+}
+.itemsSelect li h3{
+    margin-top: 0;
+}
+.sceneList .img{
+    background: #000;
+}
+.valSim{
+    font-size: 14px;
+    line-height: 17px;
+    padding-right: 6px;
+}
+.transparent{
+    background: url(img/tr.png);
+}
+span.plf {
+    background: none repeat scroll 0 0 #0F0F0F;
+    border-radius: 3px 3px 3px 3px;
+    display: inline-block;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 18px;
+    margin: 3px 0;
+    padding: 1px 5px;
+    text-transform: none;
+}
+.tween .lineLeft{
+    width: 44px;
+    height: 211px;
+    background: url(img/lineVH.png) no-repeat 100% 100%;
+}
+.tween .lineBottom{
+    height: 35px;
+    width: 390px;
+    background: url(img/lineVH2.png) no-repeat 0 0;
+}
+.tween .graph{
+    background: #262626;
+    width: 390px;
+    height: 211px;
+    margin: 0 0 3px 3px;
+}
+.tweenInfo{
+    background: rgba(0,0,0,0.8);
+    border-radius: 2px;
+    padding: 3px;
+    position: absolute;
+    display: none;
+    color: #bcbcbc;
+    font-size: 10px;
+    z-index: 789;
+}
+.compass{
+    width: 77px;
+    height: 73px;
+    background: url(img/compass.png) no-repeat;
+    position: absolute;
+    bottom: 10px;
+    left: 10px
+}
+.compass .direction{
+    width: 25px;
+    height: 13px;
+    background: url(img/compass_direction.png) no-repeat;
+    margin: 30px 0 0 26px;
+    transform:rotate(0deg);
+    -ms-transform:rotate(0deg); /* IE 9 */
+    -webkit-transform:rotate(0deg); /* Safari and Chrome */
+}
+
+.globalManu li{
+    float: left;
+    cursor: pointer;
+    margin-right: 10px;
+    padding: 3px 6px;
+    cursor: pointer;
+    position: relative;
+    color: ;
+}
+.globalManu li:hover{
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    box-shadow:inset 0px 0px 3px rgba(0, 0, 0, 0.4);
+	-moz-box-shadow:inset 0px 0px 3px rgba(0, 0, 0, 0.4);
+	-webkit-box-shadow:inset 0px 0px 3px rgba(0, 0, 0, 0.4);
+    background-color: #222222;
+}
+.globalManu li div{
+    background-color: #383838;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    box-shadow:0px 2px 5px rgba(0, 0, 0, 0.35);
+	-moz-box-shadow:0px 2px 5px rgba(0, 0, 0, 0.35);
+	-webkit-box-shadow:0px 2px 5px rgba(0, 0, 0, 0.35);
+    position: absolute;
+    top: 19px;
+    left: 0;
+    display: none;
+    z-index: 99999;
+    padding: 0;
+    overflow: hidden;
+}
+.globalManu li:hover div{
+    display: block;
+}
+.globalManu li div span{
+    display: block;
+    padding: 5px 8px;
+}
+.globalManu li div span:hover{
+    color: #fff;
+    background: #ff8929 !important;
+}
+.globalManu li div span.line{
+    border-top: 1px solid #181818;
+    border-bottom: 1px solid #272727;
+}
+.sharsSims div{
+    position: absolute;
+    outline: 1px solid #FF3203;
+    opacity: 0.1
+}
+.sharsSims div.active,
+.sharsSims div:hover{
+    outline: 1px solid #FF9601;
+    cursor: pointer;
+    opacity: 1
+}
+#fileManager .box,
+.animRightBox{
+    background: url(img/fl_name.png) repeat-x 0 0;
+}
+#fileManager .box .name,
+.animationConteiner .animationTitlePanel{
+    padding: 0 0 0 24px;
+    line-height: 30px;
+    background: url(img/fl_pit.png) no-repeat 10px 50%;
+    height: 29px;
+    color: #b5b5b5;
+    font-weight: bold;
+}
+.animationConteiner .animationTitlePanel span{
+    display: inline-block;
+    cursor: pointer;
+    padding: 0 5px;
+}
+.animationConteiner .animationTitlePanel span:hover,
+.animationConteiner .animationTitlePanel span.active{
+    background: #505050;
+}
+#fileManager .box .name .addNew,
+.animationConteiner .animationTitlePanel .addNew{
+    float: right;
+    background: url(img/plus.png) no-repeat 50% 50%;
+    cursor: pointer;
+    height: 29px;
+    width: 30px;
+}
+#fileManager .box .content{
+    padding: 5px 10px;
+    min-height: 135px;
+}
+#fileManager .box .content li{
+    display: block;
+    color: #b5b5b5;
+    padding: 0 3px 0 26px;
+    line-height: 22px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+#fileManager .box .content li .nameItem{
+    overflow: hidden;
+}
+#fileManager .box .content li.image{
+    background: url(img/fl/image.png) no-repeat 3px 50%;
+}
+#fileManager .box .content li.layer{
+    background: url(img/fl/layer.png) no-repeat 3px 50%;
+}
+#fileManager .box .content li.object3D{
+    background: url(img/fl/object.png) no-repeat 3px 50%;
+}
+#fileManager .box .content li.emiter{
+    background: url(img/fl/particles.png) no-repeat 3px 50%;
+}
+#fileManager .box .content li.box{
+    background: url(img/fl/box.png) no-repeat 3px 50%;
+}
+#fileManager .box .content li.sound{
+    background: url(img/fl/sound.png) no-repeat 3px 50%;
+}
+#fileManager .box .content li.point{
+    background: url(img/fl/point.png) no-repeat 3px 50%;
+}
+#fileManager .box .content li.ground{
+    background: url(img/fl/area.png) no-repeat 3px 50%;
+}
+#fileManager .box .content li.maps{
+    background: url(img/fl/maps.png) no-repeat 3px 50%;
+}
+#fileManager .box .content li.wall{
+    background: url(img/fl/wall.png) no-repeat 3px 50%;
+}
+#fileManager .box .content li.object{
+    background: url(img/fl/gameObject.png) no-repeat 3px 50%;
+}
+#fileManager .box .content li.animations{
+    background: url(img/fl/animation.png) no-repeat 3px 50%;
+}
+#fileManager .box .content li.skins{
+    background: url(img/fl/skin.png) no-repeat 3px 50%;
+}
+#fileManager .box .content li.hover:hover,
+#fileManager .box .content li.hover.active{
+    background-color: #2b2b2b;
+}
+#fileManager .box .content li del{
+    display: block;
+    opacity: 0;
+    float: right;
+    height: 16px;
+    width: 16px;
+    margin-top: 3px;
+    background: url(img/fl/del.png) no-repeat 50% 50%;
+}
+#fileManager .box .content li:hover del{
+    opacity: 1;
+}
+.layersList{
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px !important;
+}
+.layersList.active{
+    color: #fff;
+}
+.layersList .visible,
+.layersList .animation{
+    width: 16px;
+    height: 16px;
+    margin-top: 7px;
+    background: url(img/layerIcon.png) no-repeat 0 50%;
+    float: left;
+    cursor: pointer;
+}
+.layersList .visible.active{
+    background-position: -16px 50%;
+}
+.layersList .animation{
+    background: url(img/fl/animation.png) no-repeat 0 50%;
+}
+.layersList.skin .animation{
+    background: url(img/fl/skin.png) no-repeat 0 50%;
+}
+.layersList .name{
+    overflow: hidden;
+    padding-left: 10px;
+    cursor: pointer;
+}
+.layersList .tools{
+    float: right;
+}
+.layersList .tools div{
+    float: left;
+    width: 16px;
+    height: 16px;
+    margin-top: 7px;
+    margin-left: 7px;
+    background: url(img/layerIcon.png) no-repeat 0 50%;
+    cursor: pointer;
+}
+.layersList .tools .del{
+    background-position: -48px 50%;
+}
+.layersList .tools .edit{
+    background-position: -32px 50%;
+}
+.animationConteiner{
+    background: #0e0e0e;
+}
+.animationConteiner .leftConteiner,
+.animationConteiner .rightConteiner{
+    width: 240px;
+    float: left;
+    background: #383838
+}
+.animationConteiner .rightConteiner{
+    float: right;
+}
+.animationConteiner .leftConteiner{
+    background: #1e1e1e;
+    width: 300px;
+}
+.animationConteiner .viewConteiner{
+    overflow: hidden;
+}
+.animationConteiner .viewConteiner .outline{
+    padding: 0 2px;
+}
+.animationConteiner .viewConteiner .visual{
+    background: #2d2d2d url(img/animationVis.png) no-repeat 50% 50%;
+}
+.animationPanel{
+    height: 40px;
+    margin-top: 2px;
+    background: #1e1e1e;
+    box-shadow: inset 0 1px 0 #303030;
+}
+.animationPanel .btns{
+    width: 300px;
+    float: left;
+    height: inherit;
+}
+.animationPanel .btns ul{
+    background: #292929;
+    border: 1px solid #141414;
+    border-radius: 2px;
+    height: 25px;
+    margin: 6px 10px;
+    display: inline-block;
+}
+.animationPanel .btns ul li{
+    border-right: 1px solid #191919;
+    height: inherit;
+    cursor: pointer;
+    width: 30px;
+    line-height: 25px;
+    color: #ff8400;
+    font-size: 12px;
+    display: block;
+    float: left;
+    text-align: center;
+}
+.animationPanel .btns ul li:last-child{
+    border-right: 0;
+}
+.animationPanel .btns ul li.play{
+    background: url(img/animationToolsPlay.png) no-repeat 50% 50%;
+}
+.animationPanel .btns ul li.play.active{
+    background: url(img/animationToolsPlayActive.png) no-repeat 50% 50%;
+}
+.animationPanel .btns ul li.key{
+    background: url(img/animationToolsKey.png) no-repeat 50% 50%;
+}
+.animationPanel .btns ul li.key:hover{
+    background: url(img/animationToolsKeyActive.png) no-repeat 50% 50%;
+}
+.animationPanel .btns ul li.time{
+    width: 60px;
+}
+.animationPanel .btns ul li.loop{
+    background: url(img/animationToolsLoop.png) no-repeat 50% 50%;
+}
+.animationPanel .btns ul li.start{
+    background: url(img/animationStartEnd.png) no-repeat 50% 50%;
+}
+.animationPanel .btns ul li.end{
+    background: url(img/animationStartEnd-02.png) no-repeat 50% 50%;
+}
+.animationPanel .btns ul li.step{
+    background: url(img/animationToolsStep.png) no-repeat 50% 50%;
+}
+.animationPanel .btns ul li.step.active{
+    background: url(img/animationToolsStep-02.png) no-repeat 50% 50%;
+}
+.animationPanel .btns ul li.loop.active{
+    background: url(img/animationToolsLoopActive.png) no-repeat 50% 50%;
+}
+.animationPanel .animTrack{
+    overflow: hidden;
+    height: inherit;
+    background: url(img/animationToolsTrack.png) repeat-x 0 0;
+}
+.animationConteiner .animlayerListBox{
+    padding: 0;
+}
+.animListContent li.active{
+    box-shadow: inset 2px 0 0 #ff8400;
+}
+.simpleListUl{
+    padding: 0;
+    margin: 0;
+}
+.simpleListUl > li{
+    display: block;
+    color: #cecece;
+    background: #383838;
+}
+.simpleListUl > li:nth-child(even){
+    background: #323232;
+}
+.simpleListUl > li:hover{
+    background: #404040;
+}
+.simpleListLi li{
+    padding: 8px 10px;
+}
+.treeList{
+    position: relative;
+    background: url(img/animationToolsListGrig.png);
+    padding: 0 10px !important;
+    min-height: 144px !important;
+}
+.treeList:after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: #383838
+}
+.treeList ul{
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+.treeList li{
+    padding: 0px !important;
+    padding-left: 15px !important;
+    color: #cecece !important;
+    line-height: 14px !important;
+    display: block;
+    position: relative;
+    background: url(img/animIconsRoot.png) no-repeat 1px 6px;
+}
+.treeList li.img{
+    background: url(img/animationToolsList.png) no-repeat 0 7px;
+}
+.treeList li.placeholder{
+    border: 1px dashed #F09558;
+    background: none;
+}
+
+.treeList li span{
+    display: block;
+    padding: 5px 0;
+    margin-left: 1px;
+    padding-left: 5px;
+    cursor: pointer;
+}
+.treeList li span:hover,
+.treeList li span.active{
+    background-color: #2c2c2c; 
+}
+#listScripts{
+    padding: 10px;
+}
+#listScripts > li{
+    display: block;
+    background: #232323;
+    border: 1px solid #171717;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+}
+#listScripts > li:last-child{
+    margin-bottom: 0;
+}
+#listScripts > li:hover{
+    background: #262626;
+}
+#listScripts > li ul.editBtns{
+    float: right;
+}
+#listScripts > li .name{
+    overflow: hidden;
+    color: #d9d9d9;
+    font-size: 12px;
+    line-height: 22px;
+    cursor: pointer;
+    min-height: 20px;
+}
+#listScripts .nameScript{
+    float: right;
+    width: 150px;
+    color: #6D6D6D;
+    font-size: 12px;
+    line-height: 22px;
+}
+#listScripts > li .name span{
+    font-size: 11px;
+    color: #515151;
+}
+#listScripts > li ul.editBtns li{
+    height: 20px;
+    width: 30px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+#listScripts > li ul.editBtns li.edit{
+    background-image: url(img/edit_input.png);
+}
+#listScripts > li ul.editBtns li.del{
+    background-image: url(img/fl/del.png);
+}
+#listScripts > li ul.editBtns li.run{
+    background-image: url(img/animationToolsStep.png);
+}
+#listScripts > li ul.editBtns li.run.active{
+    background-image: url(img/animationToolsStep-02.png);
+}
+.errorAccess{
+    background: rgba(255,255,255,0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2000;
+    display: none;
+}
+.errorAccess .gu{
+    background: #000;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 125px;
+    margin: -63px 0 0 0;
+}
+.errorAccess .er{
+    width: inherit;
+    height: inherit;
+    background: url(img/error.png) no-repeat 13% 26px;
+}
+.preloader{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff url(img/logo.png) no-repeat 50% 50%;
+    z-index: 1999;
+}
+.statusLine{
+    position: absolute;
+    top: 31px;
+    height: 3px;
+    width: 0;
+    left: 0;
+    background: url(img/statusLine.png) repeat-x;
+    z-index: 1555;
+}
+.fileViewIco,
+.folderViewIco{
+    padding-left: 20px !important;
+    background-image: url(img/floFile.png);
+    background-repeat: no-repeat;
+    background-position: 8px 8px !important;
+}
+.folderViewIco{
+    background-image: url(img/flo.png);
+}
