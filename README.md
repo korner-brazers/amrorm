@@ -6,3 +6,6 @@ Amrorm заменяет традиционные растровые анимац
 
 *  http://amrorm.com
 *  http://amrorm.com/exemple/javascript/index.html
+
+##Лицензия
+Amrorm - распространяется в свободной лицензии MIT
