@@ -1,15 +1,15 @@
 ##JAVASCRIPT API
 
 ###Методы
-* loading(file path,callback function) - Загрузка файла
-* create() - Создание анимации
-* setPosition({x,y}) - Установить позицию
-* getLayer(name,callback function) - Найти слой по имени
-* getPoints(name,callback function) - Найти кость по имени
-* setAnimate(name,{option}) - Установить анимацию
-* scin(name,bool) - Показать спрятать скин
-* update() - Обновить кадр анимации
-* destroy() - Уничтодить анимацию
+* `loading(file path,callback function)` - Загрузка файла анимации
+* `create()` - Создание анимации
+* `setPosition({x,y})` - Установить позицию
+* `getLayer(name,callback function)` - Найти слой по имени
+* `getPoints(name,callback function)` - Найти кость по имени
+* `setAnimate(name,{option})` - Установить анимацию
+* `skin(name,bool)` - Показать спрятать скин
+* `update()` - Обновить кадр анимации
+* `destroy()` - Уничтожить анимацию
 
 ###Быстрый старт
 ```html
@@ -38,7 +38,7 @@ anim.onDestroy = function(a){
 ```
 
 ###loading()
-Осушествляет загрузку файла для анимации
+Осуществляет загрузку файла для анимации
 
 ```javascript
 
@@ -69,7 +69,7 @@ anim.setPosition({
 ```
 
 ###getLayer()
-Поиск слоев по имени
+Поиск слов по имени
 
 ```javascript
 /*поиск только одного совпадения*/
@@ -107,6 +107,27 @@ anim.setAnimate('name');
 
 /*С настройками*/
 anim.setAnimate('name',{
-    
+    useAmount: 10 //установить текущее время анимации на 10%
 });
+```
+
+###skin()
+Показать или спрятать скин
+
+```javascript
+anim.skin('name',true);
+```
+
+###update()
+Обновить кадр анимации
+
+```javascript
+anim.update();
+```
+
+###destroy()
+Удалить всю анимацию
+
+```javascript
+anim.destroy();
 ```
