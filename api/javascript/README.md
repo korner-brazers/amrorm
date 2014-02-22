@@ -34,6 +34,23 @@ anim.onUpdate = function(a){
 anim.onDestroy = function(a){
     ...
 }
+
+/*Содержание перменной (a)*/
+/*
+a.position.x;
+a.position.y;
+
+a.opacity;
+a.visible;
+
+a.scale.x;
+a.scale.y;
+
+a.anchor.x;
+a.anchor.y;
+
+a.rotate;
+*/
 </script>
 ```
 
