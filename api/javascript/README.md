@@ -35,7 +35,7 @@ anim.onDestroy = function(a){
     ...
 }
 
-/*Содержание перменной (a)*/
+/*Содержание переменной (a)*/
 /*
 a.position.x;
 a.position.y;
